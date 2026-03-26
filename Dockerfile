@@ -8,4 +8,4 @@ RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.
 RUN pip install --no-cache-dir streamlit
 COPY . .
 EXPOSE 8501
-CMD ["sh", "-c", "streamlit run app.py --server.port=${PORT:-8501} --server.address=0.0.0.0 --server.headless=true"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7000}"]
