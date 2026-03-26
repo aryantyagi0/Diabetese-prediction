@@ -5,7 +5,7 @@ import numpy as np
 # Load model
 model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-st.title("Diabetes Prediction App")
+st.title("Diabetes Prediction App22222222222")
 
 # Input fields
 pregnancies = st.number_input('Pregnancies')
